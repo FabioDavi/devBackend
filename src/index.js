@@ -7,7 +7,7 @@ const mongoose  = require('mongoose')
 // instalar a biblioteca npm add mongoose
 
 // Mongodb (não relacional... otimo para banco sem muitos relacionamentos)
-mongoose.connect('mongodb+srv://fabiodavirauh:123Q!op@cluster0-bkguh.mongodb.net/fabiodb?retryWrites=true&w=majority',{
+mongoose.connect('mongodb+srv://server:123@cluster0-bkguh.mongodb.net/bd?retryWrites=true&w=majority',{
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
@@ -19,6 +19,7 @@ app.use(cors()) // a esquerda libera acesso para todas as aplicaçõpes
 app.use(express.json())
 // fazendo com que o express entenda requisições com corpo json
 // precisa vir antes das rotas ( o node lê de forma linear... de cima pra baixo)
+
 
 app.use(routes)
 
